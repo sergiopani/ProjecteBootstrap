@@ -11904,4 +11904,8 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+  .card-personaliz{
+    float: right;
+    border: 1px solid black;
+  }
 }/*# sourceMappingURL=custom.css.map */
