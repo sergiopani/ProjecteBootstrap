@@ -5,17 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&display=swap" rel="stylesheet"> 
     <title>Akem WEB</title>
     <!--Vincular el icono de la pagina-->
     <link rel="stylesheet" href="img/logo_akemi.png">
     <!--Vinculate css-->
     <link rel="stylesheet" href="scss/custom.css">
+    <link rel="stylesheet" href="css/mycss.css">
     <!--Vincular iconos de bootstrap-->
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <style>
         body {
             background-image: url(img/bg.png);
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Source Code Pro', monospace;/*Source code pro linked google fonts*/
+            font-size: 13px;
         }
     </style>
 </head>
@@ -40,26 +46,27 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                
+
 
                 <!--Cuerpo de mi menu con los Enlaces-->
                 <div class="collapse navbar-collapse  p-0 pb-0 h-100" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 py-0 my-0 " style="font-size: 14px;">
-                        <li class="nav-item bg-light active h-auto d-inline-block">
-                            <a class="nav-link pb-0 pr-3" href="#">PRODUCTS</a>
-                            <a class="nav-link py-0" href="#">BRANDS</a>
-                            <a class="nav-link pt-0" href="#">AKEMI SETS</a>
+                        <li class="nav-item bg-light active  d-inline-block mx-2 pe-lg-5 pe-md-2">
+                            
+                            <div><a class="nav-link pb-0 pr-3" href="#"><span class="navegacion">PRODUCTS</span></a></div>
+                            <div><a class="nav-link py-0" href="#"><span class="navegacion">BRANDS</span></a></div>
+                            <div><a class="nav-link pt-0" href="#"><span class="navegacion">AKEMISETS</span></a></div>
                         </li>
-                        <li class="nav-item bg-light h-auto d-inline-block">
-                            <a class="nav-link pb-0" href="#">ABOUT US</a>
-                            <a class="nav-link py-0" href="#">REGISTER</a>
-                            <a class="nav-link pt-0 " href="#">LOGIN</a>
+                        <li class="nav-item bg-light h-auto d-inline-block mx-2 pe-lg-5 pe-md-2">
+                            <a class="nav-link pb-0" href="#"><span class="navegacion">ABOUT US</span></a>
+                            <a class="nav-link py-0" href="#"><span class="navegacion">REGISTER</span></a>
+                            <a class="nav-link pt-0 " href="#"><span class="navegacion">LOGIN</span></a>
                         </li>
 
-                        <li class="nav-item bg-dark h-auto d-inline-block pr-3 h-100">
-                            <a class="nav-link text-light pb-0" href="#">CART</a>
-                            <a class="nav-link text-light py-0" href="#">4 items</a>
-                            <a class="nav-link text-light pt-0" href="#">120,00€</a>
+                        <li class="nav-item bg-dark h-auto d-inline-block  h-100 ms-2 me-0 pe-lg-4 pe-md-2">
+                            <a class="nav-link text-light pb-0" href="#"><span class="navegacion">CART</span></a>
+                            <a class="nav-link text-light py-0" href="#"><span class="navegacion">4 ITEMS</span></a>
+                            <a class="nav-link text-light pt-0" href="#"><span class="navegacion">120,00€</span></a>
                         </li>
                     </ul>
 
@@ -77,7 +84,7 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active mt-3">
-                    <img src="/img/banner1.png" class="d-block w-100 img-thumbnail shadow-sm" alt="..." >
+                    <img src="/img/banner1.png" class="d-block w-100 img-thumbnail shadow-sm" alt="GigaImagen">
                 </div>
             </div>
         </div>
@@ -85,67 +92,71 @@
 
     <!--LISTA DE ARTICULOS-->
 
-    <div class="container bg-white mb-5 ">
+    <!--Imagen-->
+    <div class="container bg-white pb-3 ">
         <div class="row m-0 p-0  ">
             <div class="col-12 p-0">
                 <img src="/img/new_products.png" alt="">
             </div>
         </div>
-
-        <!--Nueva fila con la Lista de productos-->
-        <!--Dispositivos grandes: 4 columnas
-        Dispositivos medianos: 2 columnas
-        Dispositivos pequeños: 1 columna-->
-        
-        <div class="row mt-1 ">
-            <!--Añadido de las cartas-->
-            <!--1-->
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mt-3 shadow-sm p-2 mb-5 bg-white rounded mr-3 h-100" >                
-                <div class="card card-personaliz">                    
-                    <img class="card-img-top" src="/img/offer1.png" alt="Offer1" >
-                    <div class="card-body">
-                        <p class="card-text">Kaweco sport capless Roller Pen And Pencil Set In Pouch White</p>
-                    </div>                    
-                </div>
-                
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mt-3 shadow-sm p-2 mb-5 bg-white rounded ">
-                <!--Añadido de las cartas-->
-                <!--2-->
-                <div class="card">                    
-                    <img class="card-img-top" src="/img/offer2.png" alt="Offer2" >
-                    <div class="card-body">
-                        <p class="card-text">Hacoa Masking Tape Holder</p>
-                    </div>                    
-                </div>
-                
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mt-3 shadow-sm p-3 mb-5 bg-white rounded">
-                <!--Añadido de las cartas-->
-                <!--3-->
-                <div class="card">                    
-                    <img class="card-img-top" src="/img/offer3.png" alt="Offer3" >
-                    <div class="card-body">
-                        <p class="card-text">Hacoa Black Walnut Business Card Holder</p>
-                    </div>                    
-                </div>
-                
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-4 mt-3 shadow-sm p-3 mb-5 bg-white rounded">
-                <!--Añadido de las cartas-->
-                <!--4-->
-                <div class="card">                    
-                    <img class="card-img-top" src="/img/offer4.png" alt="Offer4" >
-                    <div class="card-body ">
-                        <p class="card-text">Postalco Legal Envelope Navy</p>
-                    </div>                    
-                </div>
-                
-            </div>
-        </div>
-
     </div>
 
+    <!--COMIENZO DE LA LISTA-->
+    <!--Nueva fila con la Lista de productos-->
+    <!--Dispositivos grandes: 4 columnas
+        Dispositivos medianos: 2 columnas
+        Dispositivos pequeños: 1 columna-->
+    <div class="container mt-0 mb-5">
+        <div class="row bg-white">
+            <div class="col-12 col-sm-6 col-lg-3 mb-3"> <!--Margin bottom y qe separa row, y medidas responsive-->
+                <div class="card shadow-sm">
+                    <img src="./img/offer1.png" class="card-img-top" alt="product1">
+                    <div class="card-body" style="height: 70px;">                        
+                        <p class="card-text"><b>KAWECO SPORT CAPLESS ROLLER PEN AND PENCIL SET IN POUCH WHITE.</b></p>                        
+                    </div>
+                    <ul class="list-group list-group-flush" style="border: none;">
+                        <li class="list-group-item ms-auto"><span class="ms-auto px-2 mb-2"></span></li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-3"> <!--Margin bottom y qe separa row, y medidas responsive-->
+                <div class="card shadow-sm">
+                    <img src="./img/offer2.png" class="card-img-top" alt="product1">
+                    <div class="card-body" style="height: 70px;">                        
+                        <p class="card-text"><b>HACOA MASKING TAPE HOLDER</b></p>
+                    </div>
+                    <ul class="list-group list-group-flush" style="border: none;">
+                        <li class="list-group-item ms-auto" style="border: none;"><span class="ms-auto px-2 mb-2" style="background-color:
+                         blueviolet; color: white;">NEW</span></li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-3"> <!--Margin bottom y qe separa row, y medidas responsive-->
+                <div class="card shadow-sm">
+                    <img src="./img/offer3.png" class="card-img-top" alt="product1">
+                    <div class="card-body" style="height: 70px;">                        
+                        <p class="card-text"><b>HACOA BLACK WALNUT BUSINESS CARD HOLDER</b></p>
+                    </div>
+                    <ul class="list-group list-group-flush" style="border: none;">
+                        <li class="list-group-item ms-auto "><span class="ms-auto px-2 mb-2" style="background-color:
+                         blueviolet; color: white;">NEW</span></li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-3"> <!--Margin bottom y qe separa row, y medidas responsive-->
+                <div class="card shadow-sm">
+                    <img src="./img/offer4.png" class="card-img-top" alt="product1">
+                    <div class="card-body" style="height: 70px;">                        
+                        <p class="card-text"><b>POSTALCO LEGAL ENVELOPE NAVY</b></p>
+                    </div>
+                    <ul class="list-group list-group-flush" style="border: none;">
+                        <li class="list-group-item ms-auto"><span class="ms-auto px-2 mb-2" style="background-color:
+                         blue; color: white;">OFFER</span></li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Vinculacion de JS-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
