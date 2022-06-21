@@ -37,7 +37,7 @@
     <!--NAVBAR-->
     <header class="container bg-white">
         <nav class="navbar navbar-expand-md navbar-white bg-white col-12">
-            <div class="container">
+            <div class="container px-0">
                 <!--Icono de menu-->
                 <a class="navbar-brand col-6" href="#">
                     <img src="img/logo_akemi.png" alt="LogoAkemi">
@@ -51,9 +51,9 @@
                 </button>
 
                 <!--Cuerpo de mi menu con los Enlaces-->
-                <div class="collapse navbar-collapse  p-0 pb-0 h-100" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 py-0 my-0 " style="font-size: 14px;">
-                        <li class="nav-item bg-light active  d-inline-block mx-2 pe-lg-5 pe-md-2">
+                <div class="collapse navbar-collapse p-0 pb-0 h-100" id="navbarSupportedContent">
+                    <ul class="navbar-nav col-12 ms-auto mb-2 mb-lg-0 py-0 my-0 " style="font-size: 14px;">
+                        <li class="nav-item col-4 bg-light active  d-inline-block" style="border-right: solid white 5px;">
                             
                             <div>
                                 <img style="display:inline-block;" src="img/bg_menu_active.png" alt="menu-active"><a style="display: inline-block;" class="nav-link pb-0 ps-1" href="#">
@@ -62,16 +62,16 @@
                             <div><a class="nav-link py-0" href="#"><span class="navegacion">BRANDS</span></a></div>
                             <div><a class="nav-link pt-0" href="#"><span class="navegacion">AKEMISETS</span></a></div>
                         </li>
-                        <li class="nav-item bg-light h-auto d-inline-block mx-2 pe-lg-5 pe-md-2">
+                        <li class="nav-item col-4 bg-light h-auto d-inline-block " style="border-right: solid white 5px;">
                             <a class="nav-link pb-0" href="#"><span class="navegacion">ABOUT US</span></a>
                             <a class="nav-link py-0" href="#"><span class="navegacion">REGISTER</span></a>
                             <a class="nav-link pt-0 " href="#"><span class="navegacion">LOGIN</span></a>
                         </li>
 
-                        <li  class="nav-item bg-dark h-auto d-inline-block  h-100 ms-2 me-0 pe-lg-4 pe-md-2">
-                            <a class="nav-link text-light pb-0" href="#"><span class="navegacion">CART</span></a>
-                            <a class="nav-link text-light py-0" href="#"><span class="navegacion">4 ITEMS</span></a>
-                            <a class="nav-link text-light pt-0" href="#"><span class="navegacion">120,00€</span></a>
+                        <li  class="nav-item col-4 bg-dark h-auto d-inline-block  h-100 " style="border-right: solid white 5px;">
+                            <a class="nav-link text-light pb-0 pe-0" href="#"><span class="navegacion">CART</span></a>
+                            <a class="nav-link text-light py-0 pe-0" href="#"><span class="navegacion">4 ITEMS</span></a>
+                            <a class="nav-link text-light pt-0 pe-0" href="#"><span class="navegacion">120,00€</span></a>
                         </li>
                     </ul>
 
@@ -82,15 +82,17 @@
     <!--CARROUSEL-->
     <!--GigaImagen del centro-->
     <!--P-->
-    <div class="container bg-white pb-3">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active mt-3">
-                    <img src="img/banner1.png" class="d-block w-100 img-thumbnail shadow-sm" alt="GigaImagen">
+    <main class="container bg-white">
+        <div class="container  pb-3 px-0">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active mt-3">
+                        <img src="img/banner1.png" class="d-block w-100 img-thumbnail shadow-sm" alt="GigaImagen">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <!--LISTA DE ARTICULOS-->
 
@@ -111,9 +113,21 @@
     <div class="container mt-0 mb-5">        
         <div id="productos" class="row bg-white">
             <!--For para mostrar todas las cartas-->
-            <div v-for="productos in myJson">
-                <p>{{ nombre }}</p>    
-            </div>
+            <div v-for="p in productos" :key="p.id" class="col-12 col-sm-6 col-lg-3 mb-3">
+                <!--CADA CARTA-->                
+                    <div class="card shadow-sm" v-on:click="abrirModal(p.url,p.descripcion,p.precio)">
+                        <img v-bind:src="p.url" class="card-img-top p-3 p-lg-0 p-md-3 p-sm-3" alt="product1">
+                        <div class="card-body" style="height: 70px;">
+                            <p class="card-text"><b>{{p.descripcion}}</b></p>
+                        </div>
+                        <ul class="list-group list-group-flush" style="border: none;">
+                            <li class="list-group-item ms-auto pe-0" style="border: none;">
+                                <img v-if='(p.oferta === true)' src="img/sign_new_offer.png"/>
+                                <span v-else class="ms-auto px-2 mb-2"></span>
+                            </li>
+                        </ul>
+                    </div>
+            </div>   
             
             
             <!--Cartas en codigo estatico-->
@@ -173,25 +187,34 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!--Cargo mi Javascript-->
-    <script src="scripts/producto.js" type="text/javascript" ></script>
+    <script src="scripts/modal.js" type="text/javascript" ></script>
 
     <!--Importamos el index.js-->
     <script src="scripts/index.js" ></script>
 
     <!--Script para VUE-->
-    <script>
-    import json from '/data/products.json'
+    <script>    
     new Vue({        
         el: "#productos",
         data: {
-            myJson:json,
-            nombre: "🐵 Hello World 🔮",
-            descripcion: `Timestamp ${new Date().toLocaleString()}`,
-            descripcionLarga:"Holaaaa",
-            precio:23,
-            oferta:true,
-            url:"lol",
+            productos:[],
+            
+            
         },
+        methods: {
+            abrirModal: function (url,descripcion,precio) {
+            //Llama a la funcion modal de Modal.js que mustra el modal
+            showModal(url,descripcion,precio)
+            }
+
+        },
+        mounted(){
+            fetch("http://localhost:3000/productos")
+            .then((res) =>res.json())
+            .then(data => this.productos = data)
+            .catch(err => console.log(err.message))
+        }
+
     })
     </script>
 
