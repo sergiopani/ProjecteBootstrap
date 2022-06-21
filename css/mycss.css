@@ -1,6 +1,6 @@
 /*Coloca decoracion personal al pasar el raton por los links de la navegacion*/
-.navegacion:hover{
-   
-   
-}
 
+
+a.pt-0:nth-child(1) > span:hover{
+   color:blue;
+}
