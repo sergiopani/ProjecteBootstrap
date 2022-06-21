@@ -1,0 +1,37 @@
+{
+"productos":[
+    {
+        "nombre": "Producto1",
+        "descripcion": "Este es el producto 1",
+        "descripcionLarga": "Este producto consiste en que es el 1",
+        "precio":20,
+        "oferta":false,
+        "url":"/img/offer1.png"
+    },
+    {
+        "nombre": "Producto2",
+        "descripcion": "Este es el producto 2",
+        "descripcionLarga": "Este producto consiste en que es el 2",
+        "precio": 40,
+        "oferta": true,
+        "url": "/img/offer2.png"
+    },
+    {
+        "nombre": "Producto3",
+        "descripcion": "Este es el producto 3",
+        "descripcionLarga": "Este producto consiste en que es el 3",
+        "precio": 60,
+        "oferta": true,
+        "url": "/img/offer3.png"
+    },
+    {
+        "nombre": "Producto4",
+        "descripcion": "Este es el producto 4",
+        "descripcionLarga": "Este producto consiste en que es el 4",
+        "precio": 80,
+        "oferta": true,
+        "url": "/img/offer4.png"
+    }
+
+]
+}
