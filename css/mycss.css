@@ -1,6 +1,14 @@
 /*Coloca decoracion personal al pasar el raton por los links de la navegacion*/
-
-
-a.pt-0:nth-child(1) > span:hover{
+a:nth-child(1) > span:hover{
    color:blue;
 }
+
+
+.border-blanco{
+   border-right: solid white 5px;
+}
+
+.altura-carta{
+   height: 70px;
+}
+
