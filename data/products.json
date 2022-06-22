@@ -5,7 +5,7 @@
         "nombre": "Producto1",
         "descripcion": "Este es el producto 1",
         "descripcionLarga": "Este producto consiste en que es el 1",
-        "precio":20.00,
+        "precio":21.00,
         "oferta":false,
         "url":"/img/offer1.png"
     },
@@ -32,10 +32,9 @@
         "nombre": "Producto4",
         "descripcion": "Este es el producto 4",
         "descripcionLarga": "Este producto consiste en que es el 4",
-        "precio": 80,
+        "precio": 80.00,
         "oferta": true,
         "url": "/img/offer4.png"
     }
-
 ]
 }
