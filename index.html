@@ -83,7 +83,7 @@
                                 <a class="nav-link text-light py-0 pe-0" href="#"><span
                                         class="navegacion">{{cantidadTotal}}</span> ITEMS</a>
                                 <a class="nav-link text-light pt-0 pe-0" href="#"><span
-                                        class="navegacion">{{precioTotal}}</span></a>
+                                        class="navegacion">{{precioTotal}} €</span></a>
                             </li>
                         </ul>
 
@@ -154,12 +154,10 @@
                                     <h5 class="pt-2">{{ productos[actualPosition].descripcion}}</h5>
                                     <h6>{{productos[actualPosition].precio}}</h6>
                                 </div>
-                                <div class="modal-footer justify-content-md-center">
-
+                                <div class="modal-footer justify-content-md-center">                                    
                                     <input v-model="cantidadActual" type="number" id="quantity" name="quantity" min="1" />
                                     <button v-on:click="validarCantidad();cerrarModal();setPrecio(productos[actualPosition].precio);setCantidad();"
-                                        class="btn btn-primary bg-dark col-6">COMPRAR</button>
-
+                                        class="btn btn-primary bg-dark col-6">COMPRAR</button>                                        
                                 </div>
                             </div>
                         </div>
