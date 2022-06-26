@@ -21,7 +21,7 @@
     <script src="https://unpkg.com/vue@next"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <script type="text/javascript" src="scripts/products.json"></script>
+    
 
     <style>
         body {
@@ -57,7 +57,7 @@
                     <!--Cuerpo de mi menu con los Enlaces-->
                     <div class="collapse navbar-collapse p-0 pb-0 h-100" id="navbarSupportedContent">
                         <ul class="navbar-nav col-12 ms-auto mb-2 mb-lg-0 py-0 my-0 " style="font-size: 14px;">
-                            <li class="nav-item col-4 bg-light active  d-inline-block border-blanco"
+                            <li class="nav-item col-12 col-md-4 bg-light active  d-inline-block border-blanco"
                                 >
 
                                 <div>
@@ -65,24 +65,24 @@
                                         style="display: inline-block;" class="nav-link pb-0 ps-1" href="#">
                                         <span>PRODUCTS</span></a>
                                 </div>
-                                <div><a class="nav-link py-0" href="#"><span class="navegacion">BRANDS</span></a></div>
-                                <div><a class="nav-link pt-0" href="#"><span class="navegacion">AKEMISETS</span></a>
+                                <div><a class="nav-link ps-2 ps-md-2 py-0" href="#"><span class="navegacion">BRANDS</span></a></div>
+                                <div><a class="nav-link ps-2 ps-md-2 pt-0" href="#"><span class="navegacion">AKEMISETS</span></a>
                                 </div>
                             </li>
-                            <li class="nav-item col-4 bg-light h-auto d-inline-block border-blanco"
+                            <li class="nav-item col-12 col-md-4 bg-light h-auto d-inline-block border-blanco"
                                 >
-                                <a class="nav-link pb-0" href="#"><span class="navegacion">ABOUT US</span></a>
-                                <a class="nav-link py-0" href="#"><span class="navegacion">REGISTER</span></a>
-                                <a class="nav-link pt-0 " href="#"><span class="navegacion">LOGIN</span></a>
+                                <a class="nav-link ps-2 ps-md-2 pb-0" href="#"><span class="navegacion">ABOUT US</span></a>
+                                <a class="nav-link ps-2 ps-md-2 py-0" href="#"><span class="navegacion">REGISTER</span></a>
+                                <a class="nav-link ps-2 ps-md-2 pt-0 " href="#"><span class="navegacion">LOGIN</span></a>
                             </li>
 
-                            <li id="calcular" class="nav-item col-4 bg-dark h-auto d-inline-block  h-100 border-blanco"
+                            <li id="calcular" class="nav-item  col-12 col-md-4 bg-dark h-auto d-inline-block  h-100 border-blanco"
                                 >
-                                <a class="nav-link text-light pb-0 pe-0" href="#"><span
+                                <a class="nav-link text-light  ps-2 ps-md-2 pb-0 pe-0" href="#"><span
                                         class="navegacion">CART</span></a>
-                                <a class="nav-link text-light py-0 pe-0" href="#"><span
+                                <a class="nav-link text-light ps-2 ps-md-2 py-0 pe-0" href="#"><span
                                         class="navegacion">{{cantidadTotal}}</span> ITEMS</a>
-                                <a class="nav-link text-light pt-0 pe-0" href="#"><span
+                                <a class="nav-link text-light ps-2 ps-md-2 pt-0 pe-0" href="#"><span
                                         class="navegacion">{{precioTotal}} €</span></a>
                             </li>
                         </ul>
@@ -161,9 +161,10 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
-
+                
 
             </div>
         </div>
